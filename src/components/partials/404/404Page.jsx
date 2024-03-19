@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ErrorPage = (props) => {
   const wrapper = {
@@ -19,6 +20,9 @@ const ErrorPage = (props) => {
         <div className="col-12 text-center mt-5">
           <div className="">
             <button className="btn-custom-light" onClick={()=>props.history.goBack()}><div >RETRY</div></button>
+          </div>
+          <div className="">
+            <Link className="btn-custom-light" to="/"><div >RETRY</div></Link>
           </div>
         </div>
       </div>
