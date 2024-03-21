@@ -35,9 +35,9 @@ const Sidedrawer = ({ show, closeSidedrawer }) => {
         <li className="nav-item text-start">
           <UncontrolledDropdown nav className="p-0">
             <DropdownToggle nav caret className="py-0 px-0">
-              <div className="class-avatar pe-2">
+              {/* <div className="class-avatar pe-2">
                 <Avatar style={{height:"25px",width:"25px"}}>{userName.slice(0,1).toUpperCase()}</Avatar>
-              </div>
+              </div> */}
               {userName}
             </DropdownToggle>
             <DropdownMenu className="my-0 py-0">
