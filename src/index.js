@@ -15,7 +15,7 @@ root.render(
       <App />
     </Provider>
   </>
-    );
+);
 
 
 

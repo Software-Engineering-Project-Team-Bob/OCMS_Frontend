@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
 import { Modal, ModalBody, TabContent, TabPane } from "reactstrap";
 import { withRouter, Redirect, Link } from "react-router-dom";
 import "./LoginModal.css";
@@ -23,12 +23,17 @@ import ContactPhoneOutlinedIcon from "@material-ui/icons/ContactPhoneOutlined";
 import Button from "@material-ui/core/Button";
 import FormHelperText from "@material-ui/core/FormHelperText";
 import axios from "axios";
-import { ASYNC_LOGIN, ASYNC_SIGNUP, selectUserData, SET_ERROR_NULL } from '../../../reduxSlices/authSlice';
+import {
+  ASYNC_LOGIN,
+  ASYNC_SIGNUP,
+  selectUserData,
+  SET_ERROR_NULL,
+} from "../../../reduxSlices/authSlice";
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     flexWrap: "wrap",
-    justifyContent: "center", 
+    justifyContent: "center",
     marginTop: "10px",
     "& .MuiInputLabel-formControl ": {
       top: "-6px",
@@ -163,18 +168,20 @@ const LoginModal = (props) => {
           email: values.email,
           password: values.password,
           logging: true,
-        }));
+        })
+      );
     } else {
       dispatch(
         ASYNC_SIGNUP({
           email: values.email,
           password: values.password,
           name: values.name,
-          contact:values.contact
-        })); 
+          contact: values.contact,
+        })
+      );
     }
   };
-  
+
   return (
     <>
       <Modal
@@ -207,7 +214,7 @@ const LoginModal = (props) => {
                 <h5 className="font-weight-bold pb-0 pt-2">Sign Up</h5>
               </button>
             </div>
-          </div> 
+          </div>
           <TabContent activeTab={activeTab} className="mt-4">
             <TabPane tabId="1">
               {/* SIGN IN */}
@@ -303,10 +310,17 @@ const LoginModal = (props) => {
                       ) : null}
                     </FormControl>
                     <div className="d-flex flex-column align-items-center">
-                      {
-                        logging ? <CircularProgress className="display-block"/> : error ? <p className="text-center text-danger mb-0 mt-3">{error}</p> : null
-                      }
-                      <button onClick={formSubmitHandler} className="form-btn mx-auto">
+                      {logging ? (
+                        <CircularProgress className="display-block" />
+                      ) : error ? (
+                        <p className="text-center text-danger mb-0 mt-3">
+                          {error}
+                        </p>
+                      ) : null}
+                      <button
+                        onClick={formSubmitHandler}
+                        className="form-btn mx-auto"
+                      >
                         Sign In
                       </button>
                     </div>
@@ -433,10 +447,17 @@ const LoginModal = (props) => {
                       ) : null}
                     </FormControl>
                     <div className="d-flex flex-column align-items-center">
-                    {
-                      logging ? <CircularProgress /> : error ? <p className="text-center text-danger mb-0 mt-3">{error}</p> : null
-                    }
-                      <button onClick={formSubmitHandler} className="form-btn mx-auto">
+                      {logging ? (
+                        <CircularProgress />
+                      ) : error ? (
+                        <p className="text-center text-danger mb-0 mt-3">
+                          {error}
+                        </p>
+                      ) : null}
+                      <button
+                        onClick={formSubmitHandler}
+                        className="form-btn mx-auto"
+                      >
                         Sign Up
                       </button>
                     </div>
@@ -451,7 +472,8 @@ const LoginModal = (props) => {
                   <div className="row">
                     <div className="col-12 d-flex justify-content-center align-items-center  forgot-password text-center pt-4">
                       Already registered{" "}
-                      <Link to="/"
+                      <Link
+                        to="/"
                         className="or-signin pt-0 ps-1"
                         style={{ color: "#167BFF !important" }}
                         onClick={() => setActiveTab("1")}

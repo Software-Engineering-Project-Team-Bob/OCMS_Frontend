@@ -6,31 +6,31 @@ import CloseIcon from "@material-ui/icons/Close";
 import IconButton from "@material-ui/core/IconButton";
 import LoginModal from '../LoginModal/LoginModal';
 import { useDispatch, useSelector } from 'react-redux';
-import { LOGOUT, selectUserData} from '../../../reduxSlices/authSlice';
+import { LOGOUT, selectUserData } from '../../../reduxSlices/authSlice';
 import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
- 
+
 const Sidedrawer = ({ show, closeSidedrawer }) => {
   const [closing, setClosing] = useState(false);
   const dispatch = useDispatch();
- 
+
   const closeSidedrawerUtil = () => {
     setClosing(true);
     setTimeout(() => closeSidedrawer(), 300);
   };
- 
+
   useEffect(() => {
     return () => {
       setClosing(false);
     };
   }, [show]);
   const [showModal, setShowModal] = useState(false);
-  const toggle = () => setShowModal(prevState=>!prevState);
+  const toggle = () => setShowModal(prevState => !prevState);
   const storeData = useSelector(selectUserData);
   const userName = storeData.userName;
   const token = storeData.token;
   const userEmail = storeData.userEmail;
   const ConditionalBtn = () => {
-    if(token) {
+    if (token) {
       return (
         <li className="nav-item text-start">
           <UncontrolledDropdown nav className="p-0">
@@ -42,13 +42,13 @@ const Sidedrawer = ({ show, closeSidedrawer }) => {
             </DropdownToggle>
             <DropdownMenu className="my-0 py-0">
               <DropdownItem className="my-0 ml-0 pl-3">
-                <div className="py-1 comp-nav mx-1 text-secondary fw-500"disabled >{userName}</div>
+                <div className="py-1 comp-nav mx-1 text-secondary fw-500" disabled >{userName}</div>
               </DropdownItem>
               <DropdownItem className="my-0 ml-0 pl-3">
                 <div className="py-1 comp-nav mx-1 text-secondary fw-500" disabled >{userEmail}</div>
               </DropdownItem>
               <DropdownItem className="my-0 ml-0 pl-3" divider />
-              <DropdownItem className="my-0 ml-0 pl-3" onClick={() => {dispatch(LOGOUT())}}>
+              <DropdownItem className="my-0 ml-0 pl-3" onClick={() => { dispatch(LOGOUT()) }}>
                 <Link className="py-1 mx-1 logout">Logout</Link>
               </DropdownItem>
             </DropdownMenu>
@@ -58,7 +58,7 @@ const Sidedrawer = ({ show, closeSidedrawer }) => {
     }
     else {
       return (
-        <li style={{marginLeft:"-8px"}}><button className="login-btn mt-2 m-0" onClick={() => setShowModal(true)}>Login</button></li>
+        <li style={{ marginLeft: "-8px" }}><button className="login-btn mt-2 m-0" onClick={() => setShowModal(true)}>Login</button></li>
       );
     }
   }
@@ -95,13 +95,13 @@ const Sidedrawer = ({ show, closeSidedrawer }) => {
                 </li>
               ) : ""
             }
-            <ConditionalBtn/>
+            <ConditionalBtn />
           </ul>
         </div>
-        <LoginModal isModalOpen={showModal} toggleModal={toggle} setShow={setShowModal}/>
+        <LoginModal isModalOpen={showModal} toggleModal={toggle} setShow={setShowModal} />
       </div>
     </>
   );
 };
- 
+
 export default Sidedrawer;

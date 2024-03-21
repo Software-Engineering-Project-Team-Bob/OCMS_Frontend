@@ -19,9 +19,10 @@
   font-size: 18px !important;
   line-height: 20px !important;
 }
+
 .selected {
   font-style: normal;
   font-weight: bold !important;
-  
+
   color: #1B559C !important;
 }

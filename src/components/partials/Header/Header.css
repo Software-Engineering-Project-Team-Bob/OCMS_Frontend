@@ -53,11 +53,12 @@ a {
     color: #9698A6 !important;
 }
 
-.navbar-toggler  {
-    border : none !important;
+.navbar-toggler {
+    border: none !important;
 }
+
 .navbar-toggler .MuiSvgIcon-root {
-    border : none !important;
+    border: none !important;
     font-size: 24px !important;
 }
 
@@ -65,7 +66,7 @@ a {
     font-style: normal;
     font-weight: bold !important;
     color: #1B559C !important;
-  }
+}
 
 .comp-nav {
     font-size: 16px;

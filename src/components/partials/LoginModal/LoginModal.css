@@ -4,23 +4,28 @@
   .modal-body {
     padding: 30px 30px !important;
   }
+
   .modal {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
   }
+
   .modal-dialog {
     width: 100% !important;
   }
 }
+
 @media screen and (min-width:768px) {
-  .modal-dialog  {
-    max-width : 60% !important;
+  .modal-dialog {
+    max-width: 60% !important;
   }
 }
+
 .modal-content {
   border-radius: 20px !important;
 }
+
 .auth-inner {
   width: 100%;
   margin: auto;
@@ -36,7 +41,8 @@
   font-weight: 400;
 }
 
-.forgot-password, .forgot-password a {
+.forgot-password,
+.forgot-password a {
   text-align: right;
   font-size: 13px;
   padding-top: 10px;
@@ -52,6 +58,7 @@
   color: #1B559C !important;
   font-weight: 600;
 }
+
 .or-signin:hover {
   cursor: pointer !important;
 }
@@ -68,6 +75,7 @@
   background: #fff;
   color: #898989;
 }
+
 .navigation-btn h5 {
   font-family: "Tajawal";
   font-style: normal;
@@ -75,6 +83,7 @@
   font-size: 28px;
   line-height: 32px;
 }
+
 .active.navigation-btn {
   color: rgb(46, 46, 46);
   border-bottom: 2px solid rgb(46, 46, 46) !important;
@@ -94,7 +103,8 @@
   font-size: 15px;
 }
 
-.dropdown-item.active, .dropdown-item:active {
+.dropdown-item.active,
+.dropdown-item:active {
   color: #fff;
   text-decoration: none;
   background-color: #fff !important;

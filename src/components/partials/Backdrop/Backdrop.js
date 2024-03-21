@@ -1,7 +1,7 @@
 import React from 'react';
 import './Backdrop.css';
 
-const Backdrop = ({show, closeSidedrawer}) => {
+const Backdrop = ({ show, closeSidedrawer }) => {
 
     let displayOutput = null;
     if (true) {
@@ -10,7 +10,7 @@ const Backdrop = ({show, closeSidedrawer}) => {
 
             </div>
         )
-    } 
+    }
 
     return displayOutput;
 }

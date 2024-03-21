@@ -11,7 +11,8 @@
 .Sidedrawer_Open {
     animation: sidedrawer_show 0.3s ease-out;
 }
-.side-drawer{
+
+.side-drawer {
     background: rgba(196, 196, 196, 0.09) !important;
 }
 
@@ -20,6 +21,7 @@
         transform: translateX(-100%);
         opacity: 0;
     }
+
     100% {
         transform: translateX(0);
         opacity: 1;
@@ -35,6 +37,7 @@
         transform: translateX(0);
         opacity: 1;
     }
+
     100% {
         transform: translateX(-100%);
         opacity: 0;
@@ -75,7 +78,10 @@
     color: #9698A6 !important
 }
 
-.side-drawer-links li a:hover, .side-drawer-links li a:active, .side-drawer-links li a:focus, .side-drawer-links .active {
+.side-drawer-links li a:hover,
+.side-drawer-links li a:active,
+.side-drawer-links li a:focus,
+.side-drawer-links .active {
     color: rgb(46, 44, 44) !important;
 }
 
