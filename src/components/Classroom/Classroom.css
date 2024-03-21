@@ -102,7 +102,7 @@
     cursor: pointer;
 }
 
-.Classroom_Navtab div.active{
+.Classroom_Navtab div.active {
     font-weight: bold;
     color: #0B223F;
     background-color: white;
@@ -231,7 +231,8 @@
     padding: 0 3px;
 }
 
-.Assignment_Date, .Assignment_Time {
+.Assignment_Date,
+.Assignment_Time {
     font-size: 16px;
     font-weight: bold;
     font-family: Roboto, 'Inter';
@@ -242,7 +243,7 @@
     background-color: #1B559C !important;
 }
 
-.Avatar_Small .MuiAvatar-root{
+.Avatar_Small .MuiAvatar-root {
     font-size: 17px !important;
     height: 35px;
     width: 35px;
@@ -282,44 +283,47 @@
 }
 
 .grow-wrap {
-  /* easy way to plop the elements on top of each other and have them both sized based on the tallest one's height */
-  display: grid;
+    /* easy way to plop the elements on top of each other and have them both sized based on the tallest one's height */
+    display: grid;
 }
+
 .grow-wrap::after {
-  /* Note the weird space! Needed to preventy jumpy behavior */
-  content: attr(data-replicated-value) " ";
+    /* Note the weird space! Needed to preventy jumpy behavior */
+    content: attr(data-replicated-value) " ";
 
-  /* This is how textarea text behaves */
-  white-space: pre-wrap;
+    /* This is how textarea text behaves */
+    white-space: pre-wrap;
 
-  /* Hidden from view, clicks, and screen readers */
-  visibility: hidden;
+    /* Hidden from view, clicks, and screen readers */
+    visibility: hidden;
 }
-.grow-wrap > textarea {
-  /* You could leave this, but after a user resizes, then it ruins the auto sizing */
-  resize: none;
 
-  /* Firefox shows scrollbar on growth, you can hide like this. */
-  overflow: hidden;
+.grow-wrap>textarea {
+    /* You could leave this, but after a user resizes, then it ruins the auto sizing */
+    resize: none;
+
+    /* Firefox shows scrollbar on growth, you can hide like this. */
+    overflow: hidden;
 }
-.grow-wrap > textarea,
+
+.grow-wrap>textarea,
 .grow-wrap::after {
-  /* Identical styling required!! */
-  border: 1px solid black;
-  padding: 0.5rem;
-  font: inherit;
+    /* Identical styling required!! */
+    border: 1px solid black;
+    padding: 0.5rem;
+    font: inherit;
 
-  /* Place on top of each other */
-  grid-area: 1 / 1 / 2 / 2;
+    /* Place on top of each other */
+    grid-area: 1 / 1 / 2 / 2;
 }
 
 body {
-  margin: 2rem;
-  font: 1rem/1.4 system-ui, sans-serif;
+    margin: 2rem;
+    font: 1rem/1.4 system-ui, sans-serif;
 }
 
 label {
-  display: block;
+    display: block;
 }
 
 .Attendees_Title {
@@ -342,7 +346,7 @@ label {
     .Reminder_Desc {
         font-size: 10px;
     }
- 
+
     .Classroom_Navtab div {
         font-size: 15px;
     }
@@ -363,7 +367,8 @@ label {
         font-size: 14px;
     }
 
-    .InputImgButton, .SendButton {
+    .InputImgButton,
+    .SendButton {
         font-size: 26px !important;
     }
 
@@ -438,7 +443,7 @@ label {
         margin-right: 6px;
         height: 50px;
     }
-    
+
     .Member_Name {
         font-size: 16px;
     }
@@ -456,7 +461,7 @@ label {
     background-color: #1B559C !important;
 }
 
-.floating-btn{
+.floating-btn {
     position: fixed !important;
     bottom: 80px !important;
     right: 15px !important;
