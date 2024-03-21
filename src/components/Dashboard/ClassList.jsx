@@ -49,7 +49,6 @@ const ClassList = (props) => {
             card=Card5;
           }
         }
-        // console.log(navigate);
         return (
           <div key={index} className="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
             <Link to={`/classes/${sub.classCode}`} style={{maxWidth:"100%",minWidth:"100%"}}>
