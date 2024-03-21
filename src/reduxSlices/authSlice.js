@@ -60,7 +60,7 @@ export const AUTOLOGIN = () => async dispatch => {
     const userId = localStorage.getItem('OCMS__userId');
     const userName = localStorage.getItem('OCMS__userName');
     const userEmail = localStorage.getItem('OCMS__userEmail');
-    await axios.post("http://localhost:5000/auth/verifyToken", { token: token })
+    await axios.post("https://ocms-backend.vercel.app/auth/verifyToken", { token: token })
       .then((res) => {
         dispatch(LOGIN({
           token: token,
@@ -85,7 +85,7 @@ export const ASYNC_LOGIN = userData => dispatch => {
     email: userData.email,
     password: userData.password,
   }
-  let URL = "http://localhost:5000/auth/signin";
+  let URL = "https://ocms-backend.vercel.app/auth/signin";
   axios.post(URL, authData)
     .then(response => {
       const token = response.data.token;
@@ -111,7 +111,7 @@ export const ASYNC_LOGIN = userData => dispatch => {
 export const ASYNC_SIGNUP = authData => dispatch => {
   dispatch(SET_LOGGING(true));
 
-  let URL = "http://localhost:5000/auth/signup";
+  let URL = "https://ocms-backend.vercel.app/auth/signup";
   axios.post(URL, authData)
     .then(response => {
       const token = response.data.token;
