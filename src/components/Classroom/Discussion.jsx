@@ -11,6 +11,7 @@ import autosize from 'autosize';
 import axios from 'axios';
 import db, { storage } from '../../firebase';
 import CircularProgress from "@material-ui/core/CircularProgress";
+import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 
 const Discussion = ({classCode, adminEmail}) => {
     const [discussionInput, setDiscussionInput] = useState("");
@@ -46,14 +47,19 @@ const Discussion = ({classCode, adminEmail}) => {
         setFileInput(e.target.files[0]);
     }
 
+
     const createDiscussion = () => {
         setCreateLoading(true);
         if (fileInput) {
             const fileName = new Date().getTime() + "-" + fileInput.name;
-            const uploadTask = storage.ref(`discussion/${fileName}`).put(fileInput);
-            uploadTask.on('state_changed', console.log, console.error, () => {
-                storage.ref('discussion').child(fileName).getDownloadURL()
-                  .then(firebaseURL => {
+            // const uploadTask = storage.ref(`discussion/${fileName}`).put(fileInput);
+            // uploadTask.on('state_changed', console.log, console.error, () => {
+            //     storage.ref('discussion').child(fileName).getDownloadURL()
+            //       .then(firebaseURL => {
+            const storageRef = ref(`discussion/${fileName}`);
+            const upluploadTask=uploadBytesResumable(storageRef, fileInput);
+            upluploadTask.on('state_changed', console.log, console.error, () => {
+                getDownloadURL(upluploadTask.snapshot.ref).then((firebaseURL) => {
                     return axios.post('https://ocms-backend.vercel.app/classes/createDiscussion', {
                         creatorEmail: userData.userEmail,
                         creatorName: userData.userName,
