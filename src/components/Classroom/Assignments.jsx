@@ -70,7 +70,7 @@ const Assignments = ({classCode, adminEmail, isAssignmentCreated, setIsAssignmen
                                         </div>
                                         <div className="Assignment_Box d-flex flex-column justify-content-center p-1">
                                             <div className="Assignment_Img">
-                                                <img src="https://firebasestorage.googleapis.com/v0/b/edeasy-90583.appspot.com/o/assignments%2FWhatsApp%20Image%202021-10-17%20at%204.55.04%20AM.jpeg?alt=media&token=db78b70d-2b09-4cbb-b5ac-d47e2392bd31" alt="" />
+                                                {/* <img src="" alt="" />  //put images */}
                                                 <div className="Assignment_Name">
                                                     {assignment.name}
                                                 </div>
