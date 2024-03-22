@@ -5,6 +5,8 @@
   height: 100%;
 }
 
+
+
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
@@ -91,4 +93,9 @@ a {
   100% {
     transform: translateY(-5%);
   }
+}
+
+.MuiSvgIcon-root {
+
+  color: black !important;
 }
