@@ -3,13 +3,12 @@ import './App.css';
 import React, {useEffect} from 'react';
 import Home from './components/Home/Home';
 import Dashboard from './components/Dashboard/Dashboard';
-// import Classroom from './components/Classroom/Classroom';
+import Classroom from './components/Classroom/Classroom';
 import ScrollToTop from './components/partials/ScrollToTop/ScrollToTop';
-// import AssignmentAdmin from './components/AssignmentAdmin/AssignmentAdmin';
-// import StudentSubmission from './components/StudentSubmission/StudentSubmission';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { AUTOLOGIN, selectUserData } from './reduxSlices/authSlice';
-// import Reminders from './components/partials/Header/MobileReminder'
+import Reminders from './components/partials/Header/MobileReminder'
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 const App = () => {
@@ -33,12 +32,10 @@ const App = () => {
               <Routes>
                 <Route path='/' element={<Home/>} exact/>
                  <Route path='/classes' element={<Dashboard/>} exact/>
-                {/* <Route path='/classes/reminders' element={<Reminders/>}/> */}
-                {/* <Route path='/classes/:id' element={<Classroom/>} exact/> */}
-                {/* <Route path='/classes/:id/:tab' element={<Classroom/>} exact/> */}
-                {/* <Route path='/classes/:id/assignment/:assignId/admin' element={<AssignmentAdmin/>} exact/> */}
-                {/* <Route path='/classes/:id/assignment/:assignId' element={<StudentSubmission/>} exact/> */} 
-
+                <Route path='/classes/reminders' element={<Reminders/>}/>
+                <Route path='/classes/:id' element={<Classroom/>} exact/>
+                <Route path='/classes/:id/:tab' element={<Classroom/>} exact/>
+                
               </Routes> 
             ) : (
               <Routes>
