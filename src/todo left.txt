@@ -1,6 +1,11 @@
-TAs add
-storing files - assignment storing inw working , chat assignment storing is not working
-set grade - by teacher side done visiblity on student side left
+TAs add- thinking point ot be added as  a member by calling th ejoin member fucntionality, because changing th ewhole sturtur frombackend  as  a
+
+
 timetable -Sagnibha 
+
+//will be corrected
+storing files - chat assignment storing is not working
+
+//see on later
 live classes
 
