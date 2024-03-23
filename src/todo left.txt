@@ -1,6 +1,5 @@
 TAs add- thinking point ot be added as  a member by calling th ejoin member fucntionality, because changing th ewhole sturtur frombackend  as  a
 
-set grade - by teacher side done visiblity on student side left
 
 timetable -Sagnibha 
 
