@@ -148,8 +148,14 @@ const Classroom = () => {
                     <div className="Side_Border">{classYear}</div>
                     <div>{subject}</div>
                   </div>
+                  <div className="flex-row justify-center items-center">
                   <div className="Class_Code mt-4 mb-2">
                     Class Code - <b>{classCode}</b>
+                  </div>
+                  <div className="Class_Code mt-4 mb-2">
+                    Class Code - <b>{classCode}</b>
+                  </div>
+
                   </div>
                 </div>
               </div>
