@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.3",
+    "@mui/icons-material": "^5.15.14",
     "@reduxjs/toolkit": "^2.2.1",
     "@supabase/supabase-js": "^2.39.8",
     "@testing-library/jest-dom": "^5.17.0",

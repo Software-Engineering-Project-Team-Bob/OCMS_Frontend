@@ -3,9 +3,6 @@ TAs add- thinking point ot be added as  a member by calling th ejoin member fucn
 
 timetable -Sagnibha 
 
-//will be corrected
-storing files - chat assignment storing is not working
 
-//see on later
-live classes
+
 

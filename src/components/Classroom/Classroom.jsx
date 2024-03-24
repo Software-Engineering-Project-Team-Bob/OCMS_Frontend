@@ -10,6 +10,7 @@ import Assignments from './Assignments';
 import Attendees from "./Attendees";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import VideocamIcon from "@material-ui/icons/Videocam";
+import DuoIcon from "@material-ui/icons/Duo";
 import AddRoundedIcon from '@material-ui/icons/AddRounded';
 import { Button} from 'reactstrap';
 import CreateAssignment from "./CreateAssignment";
@@ -275,11 +276,22 @@ const Classroom = () => {
                   </div>
                   {
                     (adminName===storeData.userName) ? (
-                      <div className="d-flex justify-content-center">
+                      <div className="flex">
+                      <div className="d-flex  justify-content-center">
                         <Button outline color="primary" className="Button_Hover d-flex align-items-center py-2 px-3 fs-6" onClick={() => setShow(true)}>
                           <AddRoundedIcon style={{fontSize: "28px", margin: "-2px 3px 0 0"}} />
                           Create Assignment
                         </Button>
+                      </div>
+                      <div className="d-flex justify-content-center mt-4">
+                        <Button 
+                        // to="https://mirotalkp2p-1drvgf4p.b4a.run/"
+                        onClick={() => window.open("https://mirotalkp2p-1drvgf4p.b4a.run/", "_blank")}
+                        outline color="primary" className="Button_Hover d-flex align-items-center py-2 px-3 fs-6" >
+                          <DuoIcon style={{fontSize: "28px", margin: "-2px 3px 0 0"}} />
+                          Start a Live Class
+                        </Button>
+                      </div>
                       </div>
                     ) :(<></>)
                   }

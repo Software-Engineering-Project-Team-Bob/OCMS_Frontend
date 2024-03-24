@@ -57,9 +57,9 @@ const Discussion = ({classCode, adminEmail}) => {
             //     storage.ref('discussion').child(fileName).getDownloadURL()
             //       .then(firebaseURL => {
             const storageRef = ref(`discussion/${fileName}`);
-            const upluploadTask=uploadBytesResumable(storageRef, fileInput);
-            upluploadTask.on('state_changed', console.log, console.error, () => {
-                getDownloadURL(upluploadTask.snapshot.ref).then((firebaseURL) => {
+            const uploadTask=uploadBytesResumable(storageRef, fileInput);
+            uploadTask.on('state_changed', console.log, console.error, () => {
+                getDownloadURL(uploadTask.snapshot.ref).then((firebaseURL) => {
                     return axios.post('https://ocms-backend.vercel.app/classes/createDiscussion', {
                         creatorEmail: userData.userEmail,
                         creatorName: userData.userName,
