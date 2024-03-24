@@ -19,6 +19,7 @@ import axios from 'axios';
 import { selectUserData} from '../../reduxSlices/authSlice';
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { Dropdown, DropdownToggle, DropdownMenu } from 'reactstrap';
+import Calendar from './Calendar';
  
 const Classroom = () => {
   const storeData = useSelector(selectUserData);
@@ -49,7 +50,8 @@ const Classroom = () => {
       navigate('/classes/' + classCode + '/assignments');
     } else if (activeTab === "attendees") {
       navigate('/classes/' + classCode + '/attendees');
-    }
+    }else if(activeTab==="calendar"){
+      navigate('/classes/' + classCode + '/calendar');}
   }, [activeTab])
   const toggle_dropdown = () => setDropdownOpen(prevState => !prevState);
   useEffect(() => {
@@ -194,6 +196,12 @@ const Classroom = () => {
                   >
                     Attendees
                   </div>
+                  <div
+                    onClick={() => setActiveTab("calendar")}
+                    className={activeTab === "calendar" ? "active" : ""}
+                  >
+                    Calendar
+                  </div>
                 </div>
               </div>
               <div className="row justify-content-between mt-3">
@@ -207,7 +215,8 @@ const Classroom = () => {
                       classCode={classCode} 
                       adminEmail={adminEmail}
                       /> ) : 
-                    activeTab === "attendees" ? <Attendees classCode={classCode} adminName={adminName} adminEmail={adminEmail} /> : null 
+                    activeTab === "attendees" ? <Attendees classCode={classCode} adminName={adminName} adminEmail={adminEmail} /> :  
+                    activeTab==="calendar" ? <Calendar classCode={classCode} /> : null
                   }
                   
                 </div>
