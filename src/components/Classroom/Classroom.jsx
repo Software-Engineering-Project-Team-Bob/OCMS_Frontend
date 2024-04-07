@@ -152,9 +152,10 @@ const Classroom = () => {
                   <div className="Class_Code mt-4 mb-2">
                     Class Code - <b>{classCode}</b>
                   </div>
-                  <div className="Class_Code mt-4 mb-2">
-                    Class Code - <b>{classCode}</b>
-                  </div>
+                 {(adminName===storeData.userName)?( <Link to={"/classes/" + classCode + "/classtimings"}
+                     className="btn btn-primary">Set Class Timings</Link>):""}
+
+                
 
                   </div>
                 </div>

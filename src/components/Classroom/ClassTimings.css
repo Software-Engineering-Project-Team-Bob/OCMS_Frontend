@@ -1,0 +1,47 @@
+.timings-class-timings-container {
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timings-form-group {
+  margin-bottom: 20px;
+}
+
+.timings-select,
+.timings-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+.timings-submit-btn {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.timings-submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.timings-error {
+  color: red;
+  margin-bottom: 10px;
+  font-size: 14px;
+}

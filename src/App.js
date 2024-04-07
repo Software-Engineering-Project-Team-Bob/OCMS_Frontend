@@ -12,6 +12,7 @@ import { AUTOLOGIN, selectUserData } from './reduxSlices/authSlice';
 import Reminders from './components/partials/Header/MobileReminder'
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Calendar from './components/Classroom/Calendar';
+import ClassTimings from './components/Classroom/ClassTimings';
 
 const App = () => {
   const userData = useSelector(selectUserData);
@@ -40,6 +41,7 @@ const App = () => {
                 <Route path='/classes/:id/assignment/:assignId/admin' element={<AssignmentAdmin/>} exact/>
                 <Route path='/classes/:id/assignment/:assignId' element={<StudentSubmission/>} exact/>
                 <Route path='/classes/:id/calendar' element={<Calendar/>} exact/>
+                <Route path='/classes/:id/classTimings' element={<ClassTimings/>} exact/>
 
               </Routes> 
             ) : (
