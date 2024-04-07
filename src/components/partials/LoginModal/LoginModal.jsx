@@ -250,6 +250,7 @@ const LoginModal = (props) => {
                         placeholder="Type your email"
                         fullWidth
                         id="email"
+                        class="emailTesting"
                         type="email"
                         margin="normal"
                         value={values.email}
@@ -277,6 +278,7 @@ const LoginModal = (props) => {
                         fullWidth
                         placeholder="Type your password"
                         id="password"
+                        class="passwordTesting"
                         type={values.showPassword ? "text" : "password"}
                         value={values.password}
                         onChange={handleChange("password")}
@@ -318,6 +320,7 @@ const LoginModal = (props) => {
                         </p>
                       ) : null}
                       <button
+                      id="loginTesting"
                         onClick={formSubmitHandler}
                         className="form-btn mx-auto"
                       >
@@ -455,6 +458,7 @@ const LoginModal = (props) => {
                         </p>
                       ) : null}
                       <button
+                      id="signupTesting"
                         onClick={formSubmitHandler}
                         className="form-btn mx-auto"
                       >

@@ -149,8 +149,8 @@ const JoinClassroom = (props) => {
                             }
                             
                             {error ? 
-                                <button type="submit" style={{display:"flex",justifyContent:"center"}} className="m-auto mt-2 form-btn disabled">Join</button> :
-                                <button type="submit" style={{display:"flex",justifyContent:"center"}} className="m-auto mt-2 form-btn">Join</button>
+                                <button type="submit" id ="JoinClassButton" style={{display:"flex",justifyContent:"center"}} className="m-auto mt-2 form-btn disabled">Join</button> :
+                                <button type="submit" id ="JoinClassButton" style={{display:"flex",justifyContent:"center"}} className="m-auto mt-2 form-btn">Join</button>
                             }
                             
                         </form>

@@ -230,7 +230,7 @@ const CreateClassroom = (props) => {
                                 ) : null
                             }
 
-                            <button type="submit" style={{display:"flex",justifyContent:"center"}} className="m-auto mt-2 form-btn">Create</button> 
+                            <button type="submit" id="createClassroomButton" style={{display:"flex",justifyContent:"center"}} className="m-auto mt-2 form-btn">Create</button> 
                         </form>
                     </div>
                 </div>

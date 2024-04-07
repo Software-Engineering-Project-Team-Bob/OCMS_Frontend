@@ -129,7 +129,7 @@ const Dashboard = () => {
                     className="join-create-btn"
                     onClick={() => setShow(true)}
                   >
-                    <AddIcon className="pe-1 mb-1"></AddIcon>
+                    <AddIcon id="createClassDashboardButton" className="pe-1 mb-1"></AddIcon>
                     Create Class
                   </button>
                 </DropdownItem>
