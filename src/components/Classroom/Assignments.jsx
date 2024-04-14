@@ -9,7 +9,7 @@ import { selectUserData} from '../../reduxSlices/authSlice';
 import CircularProgress from "@material-ui/core/CircularProgress";
 import CreateAssignment from "./CreateAssignment";
 
-const Assignments = ({classCode, adminEmail, isAssignmentCreated, setIsAssignmentCreated}) => {
+const Assignments = ({classCode, adminEmail, isAssignmentCreated, setIsAssignmentCreated,checkTA}) => {
     const storeData = useSelector(selectUserData);
     const [assignments, setAssignments] = useState([]);
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -56,7 +56,7 @@ const Assignments = ({classCode, adminEmail, isAssignmentCreated, setIsAssignmen
                         assignments.map(assignment => {
                             return (
                                 <div key={assignment._id}>
-                                    <a href={( storeData.userEmail=== adminEmail ) ?
+                                    <a href={( storeData.userEmail=== adminEmail || checkTA===true ) ?
                                         "/classes/"+classCode+"/assignment/"+assignment._id+"/admin" :
                                         "/classes/"+classCode+"/assignment/"+assignment._id
                                     } >

@@ -13,6 +13,7 @@ import Reminders from './components/partials/Header/MobileReminder'
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Calendar from './components/Classroom/Calendar';
 import ClassTimings from './components/Classroom/ClassTimings';
+import CreateTAs from './components/Classroom/CreateTAs';
 
 const App = () => {
   const userData = useSelector(selectUserData);
@@ -42,6 +43,7 @@ const App = () => {
                 <Route path='/classes/:id/assignment/:assignId' element={<StudentSubmission/>} exact/>
                 <Route path='/classes/:id/calendar' element={<Calendar/>} exact/>
                 <Route path='/classes/:id/classTimings' element={<ClassTimings/>} exact/>
+                <Route path='/classes/:id/createTAs' element={<CreateTAs/>} exact/>
 
               </Routes> 
             ) : (
