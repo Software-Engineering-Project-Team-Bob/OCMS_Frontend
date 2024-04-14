@@ -175,10 +175,15 @@ const Classroom = () => {
                       Class Code - <b>{classCode}</b>
                     </div>
                   </div>
+                  <div className="flex-row justify-center items-center ">
+                   
+
                   {(adminName===storeData.userName)?( <Link to={"/classes/" + classCode + "/classtimings"}
-                     className="btn btn-primary">Set Class Timings</Link>):""}
+                     className="btn btn-primary m-2">Set Class Timings</Link>):""}
+                    
                     {(adminName===storeData.userName)?( <Link to={"/classes/" + classCode + "/createTAs"}
                      className="btn btn-primary">Set Class TAs</Link>):""}
+                  </div>
                 </div>
               </div>
               <div className="d-flex flex-column justify-content-between">
