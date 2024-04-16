@@ -51,6 +51,7 @@ const Discussion = ({classCode, adminEmail}) => {
     const createDiscussion = () => {
         setCreateLoading(true);
         if (fileInput) {
+            console.log("dbf dhf")
             const fileName = new Date().getTime() + "-" + fileInput.name;
             // const uploadTask = storage.ref(`discussion/${fileName}`).put(fileInput);
             // uploadTask.on('state_changed', console.log, console.error, () => {
@@ -135,7 +136,7 @@ const Discussion = ({classCode, adminEmail}) => {
                         {
                             fileInput ? (
                                 <div className="Discussion_PreviewImg ms-1 mt-2">
-                                    <img src={URL.createObjectURL(fileInput)}  />
+                                    <img src={URL.createObjectURL(fileInput)}  alt="" />
                                 </div>
                             ) : null
                         }
