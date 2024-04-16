@@ -449,6 +449,27 @@ const LoginModal = (props) => {
                         </FormHelperText>
                       ) : null}
                     </FormControl>
+                    <FormControl
+                      
+                      className={clsx(classes.margin, classes.textField)}
+                    >
+                      <InputLabel htmlFor="contact">Type</InputLabel>
+                      <Input
+                        placeholder="Type your Profile Teacher/Student/TA"
+                        fullWidth
+                        id="text"
+                        type="text"
+                        margin="normal"
+                        // value={values.contact}
+                        // onChange={handleChange("contact")}
+                        startAdornment={
+                          <InputAdornment position="start">
+                            <PermIdentityIcon />
+                          </InputAdornment>
+                        }
+                      />
+                      
+                    </FormControl>
                     <div className="d-flex flex-column align-items-center">
                       {logging ? (
                         <CircularProgress />
