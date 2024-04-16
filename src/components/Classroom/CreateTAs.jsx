@@ -52,7 +52,7 @@ function ClassTimings() {
 
   return (
     <div className="timings-class-timings-container">
-      <h2>Set Class TA for Class {classCode}</h2>
+      <h2>Set Class TA </h2>
       
       <form onSubmit={handleSubmit}>
        
