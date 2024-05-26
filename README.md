@@ -14,13 +14,13 @@ Change the Environment Variables in the .env.example  files.
 
 Config your Firebase and start a project by adding the following variables from your Firebase account to the .env file
 ```python
-API_KEY= "your-firebase-api-key"
-AUTH_DOMAIN= "your-firebase-auth-domain"
-PROJECT_ID= "your-firebase-project-id"
-STORAGE_BUCKET= "your-firebase-storage-bucket"
-MESSAGIN_SENDER_ID= "your-firebase-messaging-sender-id"
-APP_ID= "your-firebase-app-id"
-MEASUREMENT_ID= "your-firebase-measurement-id"
+REACT_APP_API_KEY= "your-firebase-api-key"
+REACT_APP_AUTH_DOMAIN= "your-firebase-auth-domain"
+REACT_APP_PROJECT_ID= "your-firebase-project-id"
+REACT_APP_STORAGE_BUCKET= "your-firebase-storage-bucket"
+REACT_APP_MESSAGING_SENDER_ID= "your-firebase-messaging-sender-id"
+REACT_APP_APP_ID= "your-firebase-app-id"
+REACT_APP_MEASUREMENT_ID= "your-firebase-measurement-id"
 ```
 
 Install all the dependencies of the project
