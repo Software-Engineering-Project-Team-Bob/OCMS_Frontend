@@ -6,7 +6,7 @@ To start the project on your local system, perform the following steps:-
 
 Clone the repository
 ```python
-https://github.com/Software-Engineering-Project-Team-Bob/OCMS_Frontend.git
+git clone https://github.com/Software-Engineering-Project-Team-Bob/OCMS_Frontend.git
 ```
 Currently, the frontend works on the hosted backend URL at [ocms-backend.vercel.app](https://ocms-backend.vercel.app/).
 
