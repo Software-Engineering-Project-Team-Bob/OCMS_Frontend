@@ -1,3 +1,4 @@
+require('dotenv').config();
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getStorage } from 'firebase/storage';
@@ -5,13 +6,13 @@ import { getFirestore } from 'firebase/firestore';
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDufgEA4sgkNYvUZLTkJJtZkWYJTz1HEbI",
-  authDomain: "classroom-a781f.firebaseapp.com",
-  projectId: "classroom-a781f",
-  storageBucket: "classroom-a781f.appspot.com",
-  messagingSenderId: "187800199384",
-  appId: "1:187800199384:web:1782e6eb0cb0dcd35237ad",
-  measurementId: "G-2XPER4BNSH"
+  apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.MESSAGING_SENDER_ID,
+  appId: process.env.APP_ID,
+  measurementId: process.env.MEASUREMENT_ID
 };
 
 const app = initializeApp(firebaseConfig);
