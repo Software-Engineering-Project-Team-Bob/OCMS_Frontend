@@ -66,9 +66,9 @@ const Home = () => {
             </div>
           </div>
           <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-end py-2">
-            <span className="px-2">
+{/*             <span className="px-2">
               <FacebookIcon style={{ color: 'black' }} />
-            </span>
+            </span> */}
             <span className="px-2">
             <a style={{
       textDecoration: 'none', color: 'black' 
