@@ -71,7 +71,7 @@ const Home = () => {
             </span>
             <span className="px-2">
             <a style={{
-      textDecoration: 'none', color: 'inherit' 
+      textDecoration: 'none', color: 'black' 
             }} 
               href="https://instagram.com/___sumitk" target="_blank">
               <InstagramIcon />
@@ -79,7 +79,7 @@ const Home = () => {
             </span>
             <span className="px-2">
               <a style={{
-      textDecoration: 'none', color: 'inherit' 
+      textDecoration: 'none', color: 'black' 
              
     }} href="https://twitter.com/SumitK371" target="_blank">
               <TwitterIcon />
@@ -87,7 +87,7 @@ const Home = () => {
             </span>
             <span className="px-2">
               <a style={{
-      textDecoration: 'none', color: 'inherit' 
+      textDecoration: 'none', color: 'black' 
               }} 
                 href="mailto:sumitkanpur2005@gmail.com">
               <MailOutlineIcon />
