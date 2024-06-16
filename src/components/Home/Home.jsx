@@ -70,17 +70,26 @@ const Home = () => {
               <FacebookIcon />
             </span>
             <span className="px-2">
-            <a href="https://instagram.com/___sumitk" target="_blank">
+            <a style={{
+      textDecoration: 'none', color: 'inherit' 
+            }} 
+              href="https://instagram.com/___sumitk" target="_blank">
               <InstagramIcon />
             </a>
             </span>
             <span className="px-2">
-              <a href="https://twitter.com/SumitK371" target="_blank">
+              <a style={{
+      textDecoration: 'none', color: 'inherit' 
+             
+    }} href="https://twitter.com/SumitK371" target="_blank">
               <TwitterIcon />
               </a>
             </span>
             <span className="px-2">
-              <a href="mailto:sumitkanpur2005@gmail.com">
+              <a style={{
+      textDecoration: 'none', color: 'inherit' 
+              }} 
+                href="mailto:sumitkanpur2005@gmail.com">
               <MailOutlineIcon />
               </a>
             </span>
