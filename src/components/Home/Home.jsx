@@ -67,14 +67,14 @@ const Home = () => {
           </div>
           <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-end py-2">
             <span className="px-2">
-              <FacebookIcon />
+              <FacebookIcon style={{ color: 'black' }} />
             </span>
             <span className="px-2">
             <a style={{
       textDecoration: 'none', color: 'black' 
             }} 
               href="https://instagram.com/___sumitk" target="_blank">
-              <InstagramIcon />
+              <InstagramIcon style={{ color: 'black' }} />
             </a>
             </span>
             <span className="px-2">
@@ -82,7 +82,7 @@ const Home = () => {
       textDecoration: 'none', color: 'black' 
              
     }} href="https://twitter.com/SumitK371" target="_blank">
-              <TwitterIcon />
+              <TwitterIcon style={{ color: 'black' }} />
               </a>
             </span>
             <span className="px-2">
@@ -90,7 +90,7 @@ const Home = () => {
       textDecoration: 'none', color: 'black' 
               }} 
                 href="mailto:sumitkanpur2005@gmail.com">
-              <MailOutlineIcon />
+              <MailOutlineIcon style={{ color: 'black' }} />
               </a>
             </span>
           </div>
