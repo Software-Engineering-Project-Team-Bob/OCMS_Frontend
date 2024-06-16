@@ -69,9 +69,11 @@ const Home = () => {
             <span className="px-2">
               <FacebookIcon />
             </span>
-            <Link to="https://instagram.com/___sumitk" className="px-2">
+            <span className="px-2>
+            <Link to="https://instagram.com/___sumitk">
               <InstagramIcon />
             </Link>
+            </span>
             <span className="px-2">
               <TwitterIcon />
             </span>
