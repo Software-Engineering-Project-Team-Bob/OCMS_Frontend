@@ -27,6 +27,7 @@ Install all the dependencies of the project
 ```python
 npm install --f
 ```
+Some dependencies have go old so that's why a need to use npm i --f 
 
 Start the project
 ```python
